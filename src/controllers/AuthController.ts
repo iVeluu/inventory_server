@@ -8,9 +8,7 @@ import WareHouse from "../models/Warehouse";
 export class AuthController {
 
     static createUser = async (req : Request, res : Response) => {
-        
         const user = new User(req.body)
-
         try {
             await user.save()
             res.send('Usuario Creado Correctamente')
@@ -32,9 +30,7 @@ export class AuthController {
     }
 
     static createProduct = async (req : Request, res : Response) => {
-        
         const product = new Product(req.body)
-
         try {
             await product.save()
             res.send('Producto Creado Correctamente')

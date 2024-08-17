@@ -7,9 +7,7 @@ export interface ISupplier extends Document {
         email: string,
         address: string
     }
-    products_supplied: {
-        product_id: Types.ObjectId
-    }[]
+    products_supplied: Types.ObjectId[]
 }
 
 const supplierSchema : Schema = new Schema({
@@ -33,11 +31,8 @@ const supplierSchema : Schema = new Schema({
     },
     products_supplied: [
         {
-            product_id: {
-                type: Schema.Types.ObjectId,
-                ref: 'Product', 
-                default: null
-            },
+            type: Types.ObjectId,
+            ref: 'Product', 
         }
     ]
 })

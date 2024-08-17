@@ -7,7 +7,6 @@ export interface IWarehouse extends Document {
     products: {
         product_id: Types.ObjectId,
         quantity: number,
-        reorder_level: number
     }[]
 }
 
@@ -32,10 +31,6 @@ const wareHouseSchema : Schema = new Schema({
                 ref: 'Product'
             },
             quantity: {
-                type: Number,
-                required: true
-            },
-            reorder_level : {
                 type: Number,
                 required: true
             }

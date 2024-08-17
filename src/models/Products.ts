@@ -12,7 +12,7 @@ export interface IProducts extends Document {
 const productSchema : Schema = new Schema({
     name: {
         type: String,
-        required: true,
+        required: true, 
     },
     description: {
         type: String,
@@ -25,7 +25,6 @@ const productSchema : Schema = new Schema({
     sku: {
         type: String,
         required: true,
-        unique: true
     },
     price: {
         type: Number,
